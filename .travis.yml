@@ -1,0 +1,18 @@
+language: python
+python:
+    - "2.7"
+
+services:
+    - mysql
+#command to install dependencies
+install: 
+    - pip install -r requirements.txt
+
+env:
+  -DJANGO=1.11.4 DB=mysql
+
+before_script:
+  - mysql -e 'create database test;' -u root
+
+script:
+    - python manage.py test
