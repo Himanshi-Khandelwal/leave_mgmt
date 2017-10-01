@@ -18,9 +18,12 @@ from django.contrib import admin
 from django.conf.urls.static import static
 from django.views.generic import TemplateView
 
-import leave_mgmt.views
+from leave_mgmt import views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^$', leave_mgmt.views.index, name='index'),
+    url(r'^$',views.index,name="index"),
+    url(r'^accounts/signup/',views.signup,name="signup"),
+    url(r'^accounts/login/',views.signin,name="login"),
+    url(r'^choice/$',views.choice,name="choice"),
 ]

@@ -4,7 +4,8 @@
 	<title>Leave Management System</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
-	
+	<link rel="stylesheet" type="text/css" href="{% static "css/default.css" %}" />
+	<link rel="stylesheet" type="text/css" href="{% static "css/style.css" %}" />
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
 	
 	<link href="{% static "css/main.css" %}" rel="stylesheet" type="text/css">
@@ -38,8 +39,9 @@
 	         </li>
 	       </ul>
 	       <form class="form-inline my-2 my-lg-0">
-	         <input class="form-control mr-sm-2" type="text" placeholder="Search">
-	         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+	         <!--<input class="form-control mr-sm-2" type="text" placeholder="Search">-->
+	         <button class="btn btn-outline-success my-2 my-sm-0"><a href="/accounts/login">Login</a></button>
+	         <button class="btn btn-outline-success my-2 my-sm-0"><a href="/accounts/signup">Sign Up</a></button>
 	       </form>
 	     </div>
 	   </nav>
@@ -64,8 +66,6 @@
 	                <h5>Get started</h5>
 	                <ul>
 	                    <li><a href="#">Home</a></li>
-	                <!--        <li><a href="#">Sign up</a></li>
-	                    <li><a href="#">Downloads</a></li>-->
 	                </ul>
 	            </div>
 	            <div class="col-sm-2">
@@ -73,15 +73,12 @@
 	                <ul>
 	                    <li><a href="#">Company Information</a></li>
 	                    <li><a href="#">Contact us</a></li>
-	                <!--<li><a href="#">Reviews</a></li>-->
 	                </ul>
 	            </div>
 	            <div class="col-sm-2">
 	                <h5>Support</h5>
 	                <ul>
 	                    <li><a href="#">FAQ</a></li>
-	                <!--        <li><a href="#">Help desk</a></li>
-	                    <li><a href="#">Forums</a></li>-->
 	                   </ul>
 	            </div>
 	            <div class="col-sm-3">
